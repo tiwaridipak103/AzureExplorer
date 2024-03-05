@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File List</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <h1>Azure File Explorer</h1>
+    <div class="container">
+        <div class="left-buttons">
+            <button id="previousButton">&#9664;</button>
+            <button id="nextButton">&#9654;</button>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" name="file" id="fileInput">
+                <button type="submit" id="uploadButton">📤</button>
+            </form>
+            <span style="margin-right: 10px;">Current Path</span>
+            <span style="margin-right: 10px;">
+                <select id="pathDropdown">
+                    <option value="/" selected>/</option>
+                    <option value="/dipak/">/dipak/</option>
+                    <option value="/dipak/tiwari/">/dipak/tiwari/</option>
+                    <option value="/dipak/tiwari/kumar/">/dipak/tiwari/kumar/</option>
+                </select>
+            </span>
+        </div>
+    </div>
+    
+    <table id="sortable">
+        <thead>
+            <tr>
+                <th class="resizable">Name</th>
+                <th class="resizable">Date</th>
+                <th class="resizable">Size</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for file in file_list %}
+            <tr>
+                <td ondblclick="rowDoubleClick(this)" oncontextmenu="showContextMenu(event, this)">{{ file['name'] }}</td>
+                <td>{{ file['modified_date'] }}</td>
+                <td>{{ file['size'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+h1 {
+    text-align: center; /* Center the text */
+    color: blue; /* Set text color to blue */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed; /* Fix table layout to prevent column resizing on content */
+}
+
+th {
+    border-right: 1px solid #ddd; /* Add right border to header cells */
+    padding: 8px;
+    text-align: left;
+    cursor: col-resize; /* Set cursor style for resizable columns */
+}
+
+th:last-child {
+    border-right: none; /* Remove right border for the last header cell */
+}
+
+td {
+    padding: 8px;
+    text-align: left;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis (...) for overflow text */
+}
+/* CSS for table rows */
+tr:hover {
+    background-color: #a0a0f0; /* Change background color on hover */
+}
+
+.popup {
+position: absolute;
+background-color: #76bbd6; /* Green background color */
+border: 1px solid #ccc;
+padding: 10px;
+z-index: 9999; /* Ensure the popup is on top of other elements */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a more prominent box shadow */
+border-radius: 5px; /* Add border radius for rounded corners */
+font-family: Arial, sans-serif; /* Set font family */
+color: #fff; /* Set text color */
+font-size: 14px; /* Set font size */
+}
+
+.popup ul {
+list-style-type: none; /* Remove bullet points */
+padding: 10px; /* Remove default padding */
+margin: 0; /* Remove default margin */
+}
+.popup ul li {
+margin-bottom: 5px; /* Add spacing between list items */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.left-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.left-buttons button {
+    margin-right: 10px; /* Add spacing between buttons */
+    padding: 8px 16px; /* Add padding to buttons */
+    font-size: 14px; /* Set font size */
+    background-color: #007bff; /* Set background color */
+    color: #fff; /* Set text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s; /* Add transition effect */
+}
+
+.left-buttons button:hover {
+    background-color: #0056b3; /* Change background color on hover */
+}
+
+.left-buttons button:focus {
+    outline: none; /* Remove focus outline */
+}
+
+.right-buttons {
+    display: flex;
+    align-items: center;
+}
+#pathDropdown {
+    width: 700px; /* Set dropdown width */
+    padding: 8px; /* Add padding */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius */
+    background-color: #f8f8f8; /* Add background color */
+    font-size: 14px; /* Set font size */
+    color: #333; /* Set text color */
+    cursor: pointer; /* Change cursor to pointer */
+    appearance: none; /* Remove default appearance */
+}
+
+#pathDropdown:focus {
+    outline: none; /* Remove focus outline */
+    border-color: #007bff; /* Change border color on focus */
+}
+
+#uploadForm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#fileInput {
+    padding: 10px;
+    margin-right: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 250px;
+    margin-bottom: 20px; /* Adjust margin-bottom to move the button up */
+}
+
+#uploadButton {
+    padding: 10px 20px;
+    background-color: #b1bab1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px; /* Adjust margin-bottom to move the button up */
+}
+
+#uploadButton:hover {
+    background-color: #45a049;
+}
